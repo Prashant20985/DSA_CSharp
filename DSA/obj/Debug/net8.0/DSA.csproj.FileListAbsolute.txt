@@ -1,0 +1,14 @@
+/Users/prashant/Desktop/CSharp/DSA/DSA/bin/Debug/net8.0/DSA
+/Users/prashant/Desktop/CSharp/DSA/DSA/bin/Debug/net8.0/DSA.deps.json
+/Users/prashant/Desktop/CSharp/DSA/DSA/bin/Debug/net8.0/DSA.runtimeconfig.json
+/Users/prashant/Desktop/CSharp/DSA/DSA/bin/Debug/net8.0/DSA.dll
+/Users/prashant/Desktop/CSharp/DSA/DSA/bin/Debug/net8.0/DSA.pdb
+/Users/prashant/Desktop/CSharp/DSA/DSA/obj/Debug/net8.0/DSA.GeneratedMSBuildEditorConfig.editorconfig
+/Users/prashant/Desktop/CSharp/DSA/DSA/obj/Debug/net8.0/DSA.AssemblyInfoInputs.cache
+/Users/prashant/Desktop/CSharp/DSA/DSA/obj/Debug/net8.0/DSA.AssemblyInfo.cs
+/Users/prashant/Desktop/CSharp/DSA/DSA/obj/Debug/net8.0/DSA.csproj.CoreCompileInputs.cache
+/Users/prashant/Desktop/CSharp/DSA/DSA/obj/Debug/net8.0/DSA.dll
+/Users/prashant/Desktop/CSharp/DSA/DSA/obj/Debug/net8.0/refint/DSA.dll
+/Users/prashant/Desktop/CSharp/DSA/DSA/obj/Debug/net8.0/DSA.pdb
+/Users/prashant/Desktop/CSharp/DSA/DSA/obj/Debug/net8.0/DSA.genruntimeconfig.cache
+/Users/prashant/Desktop/CSharp/DSA/DSA/obj/Debug/net8.0/ref/DSA.dll
