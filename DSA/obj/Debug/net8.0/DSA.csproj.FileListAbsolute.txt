@@ -12,3 +12,4 @@
 /Users/prashant/Desktop/CSharp/DSA/DSA/obj/Debug/net8.0/DSA.pdb
 /Users/prashant/Desktop/CSharp/DSA/DSA/obj/Debug/net8.0/DSA.genruntimeconfig.cache
 /Users/prashant/Desktop/CSharp/DSA/DSA/obj/Debug/net8.0/ref/DSA.dll
+/Users/prashant/Desktop/CSharp/DSA/DSA/obj/Debug/net8.0/DSA.sourcelink.json
