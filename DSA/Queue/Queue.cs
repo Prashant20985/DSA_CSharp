@@ -1,5 +1,7 @@
 namespace DSA.Queue;
 
+// Queue is a linear data structure that follows the First In First Out (FIFO) principle.
+// Elements are added to the end of the queue and removed from the front.
 public class Queue
 {
     private Node first;
@@ -14,6 +16,7 @@ public class Queue
         length = 1;
     }
 
+    // Enqueue adds a new element to the end of the queue.
     public void Enqueue(int value)
     {
         Node newNode = new Node(value);
@@ -33,7 +36,7 @@ public class Queue
     public Node Dequeue()
     {
         if (length == 0) return null;
-        Node temp = first;
+        Node temp = first; // Store the first node to return it later
         if (length == 1)
         {
             first = null;
@@ -41,8 +44,8 @@ public class Queue
         }
         else
         {
-            first = first.next;
-            temp.next = null;
+            first = first.next; // Move the first pointer to the next node
+            temp.next = null; // Clear the next pointer of the dequeued node
         }
         length--;
         return temp;
