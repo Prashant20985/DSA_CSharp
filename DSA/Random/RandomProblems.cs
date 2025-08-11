@@ -92,7 +92,7 @@ public class RandomProblems
     {
         if (string.IsNullOrEmpty(input))
             return '\0'; // Return null character if input is empty
-        Dictionary<char, int> charCount = new Dictionary<char, int>();
+        var charCount = new Dictionary<char, int>();
         foreach (char c in input)
         {
             if (charCount.ContainsKey(c))
@@ -108,6 +108,61 @@ public class RandomProblems
         }
 
         return '\0'; // Return null character if no non-repeating character is found
+    }
+    
+    // This method finds the last non-repeating character in a string.
+    public char LastNonRepeatingCharacter(string input)
+    {
+        if (string.IsNullOrEmpty(input))
+            return '\0'; // Return null character if input is empty
+
+        var charCount = new Dictionary<char, int>();
+        foreach (char c in input)
+        {
+            if (charCount.ContainsKey(c))
+                charCount[c]++;
+            else
+                charCount[c] = 1;
+        }
+
+        for (int i = input.Length - 1; i >= 0; i--)
+        {
+            if (charCount[input[i]] == 1)
+                return input[i]; // Return the last non-repeating character
+        }
+
+        return '\0'; // Return null character if no non-repeating character is found
+    }
+    
+    // This method finds the first repeating character in a string.
+    public char FirstRepeatingCharacter(string input)
+    {
+        if (string.IsNullOrEmpty(input))
+            return '\0'; // Return null character if input is empty
+
+        var charSet = new HashSet<char>();
+        foreach (char c in input)
+        {
+            if (charSet.Contains(c))
+                return c; // Return the first repeating character
+            charSet.Add(c);
+        }
+
+        return '\0'; // Return null character if no repeating character is found
+    }
+
+    public char LastRepeatingCharacter(string input)
+    {
+        if (string.IsNullOrEmpty(input))
+            return '\0';
+        var charSet = new HashSet<char>();
+        for (int i = input.Length - 1; i >= 0; i--)
+        {
+            if (charSet.Contains(input[i]))
+                return input[i]; // Return the last repeating character
+            charSet.Add(input[i]);
+        }
+        return '\0'; // Return null character if no repeating character is found
     }
     
     // This method finds the maximum element in an array.
