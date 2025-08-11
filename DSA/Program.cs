@@ -3,6 +3,7 @@
 using DSA.LinkedList;
 using DSA.Random;
 using DSA.Recursion;
+using DSA.Sorting;
 using DSA.Stack;
 
 // LinkedListDemo myLinkedList = new LinkedListDemo(1);
@@ -31,7 +32,11 @@ using DSA.Stack;
 // var reverseString = rp.ReverseStringWithoutArray("Yellow");
 // Console.WriteLine(reverseString);
 
-Factorial factorial = new Factorial();
-var result = factorial.CalculateFibonacci(40);
-Console.WriteLine("Result: " + result);
-Console.WriteLine("Counter: " + factorial.counter);
+// Factorial factorial = new Factorial();
+// var result = factorial.CalculateFibonacci(40);
+// Console.WriteLine("Result: " + result);
+// Console.WriteLine("Counter: " + factorial.counter);
+
+int[] arr = [ 2, 7, 9, 5, 3, 1 ];
+BasicSorts.SelectionSort(arr);
+Console.WriteLine(string.Join(", ", arr));
