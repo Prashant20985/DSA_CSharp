@@ -27,6 +27,11 @@ using DSA.Stack;
 // int myFactorial = factorial.CalculateFactorial(4);
 // Console.WriteLine(myFactorial);
 
-RandomProblems rp = new RandomProblems();
-var reverseString = rp.ReverseStringWithoutArray("Yellow");
-Console.WriteLine(reverseString);
+// RandomProblems rp = new RandomProblems();
+// var reverseString = rp.ReverseStringWithoutArray("Yellow");
+// Console.WriteLine(reverseString);
+
+Factorial factorial = new Factorial();
+var result = factorial.CalculateFibonacci(40);
+Console.WriteLine("Result: " + result);
+Console.WriteLine("Counter: " + factorial.counter);
