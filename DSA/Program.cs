@@ -37,6 +37,11 @@ using DSA.Stack;
 // Console.WriteLine("Result: " + result);
 // Console.WriteLine("Counter: " + factorial.counter);
 
+/*
 int[] arr = [ 2, 7, 9, 5, 3, 1 ];
 BasicSorts.SelectionSort(arr);
-Console.WriteLine(string.Join(", ", arr));
+Console.WriteLine(string.Join(", ", arr));*/
+
+int[] arr = { 2, 7, 9, 5, 3, 1 };
+int[] merged = MergeSort.Sort(arr);
+Console.WriteLine(string.Join(", ", merged));
