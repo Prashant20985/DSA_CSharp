@@ -2,6 +2,97 @@ namespace DSA.Random;
 
 public class RandomProblems
 {
+    // This method removes all occurrences of a specified value from an array
+    // and returns the new length of the array.
+    // The elements that are not removed are shifted to the front of the array.
+    // For example, given the array [3, 2, 2, 3] and val = 3,
+    // the method will return 2 and modify the array to [2, 2, _, _],
+    // where _ represents unused elements.
+    // The order of the elements that are not removed does not matter.
+    // Time Complexity: O(n), where n is the length of the array.
+    public int RemoveElement(int[] nums, int val) {
+        var i = 0;
+        for (var j = 0; j < nums.Length; j++)
+        {
+            if (nums[j] != val)
+            {
+                nums[i] = nums[j];
+                i++;
+            }
+        }
+        
+        int[] newArr = [1, 2, 3, 4, 5];
+        return i;
+        
+    }
+    
+    public int[] FindMinMax(int[] input)
+    {
+        if (input == null || input.Length == 0)
+            throw new ArgumentException("Array cannot be null or empty");
+        int min = input[0];
+        int max = input[0];
+
+        foreach (var num in input)
+        {
+            if (num < min)
+                min = num;
+            if (num > max)
+                max = num;
+        }
+        return [max, min];
+    }
+    
+    public static String FindLongestString(String[] stringList) {
+        if (stringList.Length <= 0) return "";
+    
+        String maxLenght = stringList[0];
+        
+        foreach (String val in stringList) {
+            if (maxLenght.Length < val.Length){
+                maxLenght = val;
+            }
+        }
+        return maxLenght;
+    }
+    
+    // Method to remove duplicates from a sorted array in-place.
+    public int RemoveDuplicates(int[] nums)
+    {
+        if (nums.Length == 0)
+            return 0;
+
+        int uniqueCount = 1; // At least one unique element exists
+
+        for (int i = 1; i < nums.Length; i++)
+        {
+            if (nums[i] != nums[uniqueCount - 1])
+            {
+                nums[uniqueCount] = nums[i];
+                uniqueCount++;
+            }
+        }
+        return uniqueCount;
+    }
+    
+    // Max Profit Problem:
+    // Given an array of stock prices where the index represents the day,
+    // find the maximum profit you can achieve by buying on one day and selling on another day
+    public int MaxProfit(int[] prices)
+    {
+        if (prices.Length < 2)
+            return 0;
+
+        int minPrice = int.MaxValue;
+        int maxProfit = 0;
+        foreach (var price in prices)
+        {
+            minPrice = Math.Min(minPrice, price); // Update the minimum price seen so far
+            maxProfit = Math.Max(maxProfit, price - minPrice); // Calculate the profit if sold today and update maxProfit if it's greater
+        }
+        return maxProfit;
+    }
+    
     public string ReverseString(string input)
     {
         if (string.IsNullOrEmpty(input))
