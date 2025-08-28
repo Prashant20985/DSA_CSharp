@@ -404,3 +404,47 @@ WHERE CAST(OrderID AS VARCHAR) LIKE '10%';
 SELECT * FROM Products
 WHERE LEFT(ProductName,1) = RIGHT(ProductName,1);
 
+-- Data Completeness
+-- Count validation
+SELECT COUNT(*) FROM source_table;
+SELECT COUNT(*) FROM target_table;
+
+-- Missing records
+SELECT id FROM source_table
+EXCEPT
+SELECT id FROM target_table;
+
+-- Data Quality
+-- NULL check
+SELECT * FROM orders WHERE order_date IS NULL;
+
+-- Duplicate check
+SELECT emp_id, COUNT(*) 
+FROM employee 
+GROUP BY emp_id 
+HAVING COUNT(*) > 1;
+Data Transformation
+    
+-- Validate calculated columns
+SELECT salary_usd, salary_inr 
+FROM emp 
+WHERE salary_inr != salary_usd*80;
+Referential Integrity
+    
+-- Check orphan records
+SELECT cust_id 
+FROM sales 
+WHERE cust_id NOT IN (SELECT cust_id FROM dim_customer);
+
+-- Incremental Load
+-- Check newly loaded data
+SELECT COUNT(*) 
+FROM target_table 
+WHERE load_date = CURRENT_DATE;
+
+-- SCD Validation    
+-- Ensure active records have NULL end_date
+SELECT * 
+FROM dim_customer 
+WHERE current_flag='Y' AND end_date IS NOT NULL;
+
